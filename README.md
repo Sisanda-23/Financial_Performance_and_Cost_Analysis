@@ -63,3 +63,15 @@ Granularity: **Department × Month**
 - Department Efficiency (Profit Margin)
 - Month-on-Month Growth
 
+---
+
+## 📈 Key Insights
+
+Operations costs increased significantly without corresponding revenue growth, indicating inefficiency.
+
+Multiple departments experienced recurring monthly losses due to cost spikes rather than revenue decline.
+
+Marketing and discretionary spend showed weak correlation with revenue growth.
+
+Some departments maintained stable margins, suggesting best-practice cost management.
+
