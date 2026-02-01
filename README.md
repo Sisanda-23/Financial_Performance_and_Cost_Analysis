@@ -1,6 +1,6 @@
-# 💰 Financial Performance & Cost Analysis Dashboard
+#  Financial Performance & Cost Analysis Dashboard
 
-## 📌 Business Problem
+##  Business Problem
 
 “Management doesn’t know where money is being lost.”
 
@@ -12,7 +12,7 @@ Despite steady revenue growth, leadership lacked visibility into:
 
 The goal of this project was to identify where profitability is being impacted and why, using SQL and Python-driven financial analysis.
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 - Analyze company-wide profitability trends
 - Identify high- and low-performing departments
@@ -20,7 +20,7 @@ The goal of this project was to identify where profitability is being impacted a
 - Compare month-on-month revenue vs cost growth
 - Deliver actionable, executive-level insights
 
-## 🧱 Data Model & Dataset
+##  Data Model & Dataset
 
 Since realistic public datasets rarely reflect internal financial structures, I simulated a clean, business-realistic dataset.
 
@@ -37,14 +37,14 @@ Since realistic public datasets rarely reflect internal financial structures, I 
 - Operations costs intentionally grow faster to simulate inefficiency
 - Clean relational schema suitable for SQL & BI tools
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 - **SQL:** joins, aggregations, CTEs, window functions
 - **Python:** pandas, matplotlib
 - **Database:** SQLite / PostgreSQL (portable SQL)
 - **Visualization:** matplotlib (dashboard-ready logic)
 
-## 📊 Key Analyses Performed
+##  Key Analyses Performed
 
 1. **Monthly Profit Trend**
    - Calculated total revenue, costs, and profit over time
@@ -76,7 +76,7 @@ Since realistic public datasets rarely reflect internal financial structures, I 
    - Identified months where department costs increased more than 6% MoM.
    - **Insight:** Operations experienced repeated 6–7% monthly cost spikes across multiple periods, indicating a systemic cost control issue rather than a one-time anomaly.
 
-## 📈 Visualizations
+##  Visualizations
 
 Key visuals created using matplotlib:
 
