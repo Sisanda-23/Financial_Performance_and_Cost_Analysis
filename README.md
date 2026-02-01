@@ -87,7 +87,7 @@ Key visuals created using matplotlib:
 
 These visuals clearly highlight where money is being lost and why.
 
-## 💡 Final Business Insights
+##  Final Business Insights
 
 - The company is growing and becoming more profitable overall
 - Profitability is unstable due to rising operational costs
@@ -95,7 +95,7 @@ These visuals clearly highlight where money is being lost and why.
 - Operations is the primary source of margin erosion
 - Improving cost controls would have a larger impact than increasing revenue
 
-## 🧠 Recommendations
+##  Recommendations
 
 - Conduct operational cost audits
 - Set cost-growth thresholds tied to revenue performance
