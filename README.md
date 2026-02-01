@@ -1,77 +1,103 @@
 # 💰 Financial Performance & Cost Analysis Dashboard
 
-## 📌 Project Overview
-Management lacked visibility into where money was being lost across the organization. This project analyzes revenue and cost data across multiple departments to identify inefficiencies, cost overruns, and profitability trends.
+## 📌 Business Problem
 
-The analysis simulates a real-world business scenario and delivers actionable insights using **SQL**, **Python**, and **data visualization**.
+“Management doesn’t know where money is being lost.”
 
----
+Despite steady revenue growth, leadership lacked visibility into:
 
-## 🎯 Business Problem
-> “Management doesn’t know where money is being lost.”
+- Profit trends over time
+- Department-level efficiency
+- Cost overruns and margin erosion
 
-Key challenges:
-- No clear view of departmental profitability
-- Rising costs without proportional revenue growth
-- Inconsistent month-to-month performance
+The goal of this project was to identify where profitability is being impacted and why, using SQL and Python-driven financial analysis.
 
----
+## 🎯 Project Objectives
 
-## 🔍 Objectives
-- Analyze monthly revenue, costs, and profit trends
-- Identify cost overruns and inefficiencies
-- Evaluate department-level performance
-- Measure month-over-month financial growth
-- Provide management-ready insights
+- Analyze company-wide profitability trends
+- Identify high- and low-performing departments
+- Detect cost overruns and inefficiencies
+- Compare month-on-month revenue vs cost growth
+- Deliver actionable, executive-level insights
 
----
+## 🧱 Data Model & Dataset
 
-## 🗂️ Dataset Description
+Since realistic public datasets rarely reflect internal financial structures, I simulated a clean, business-realistic dataset.
 
-### Revenue Table
-| Column | Description |
-|------|------------|
-| department_id | Department identifier |
-| revenue_date | Revenue transaction date |
-| revenue_amount | Revenue generated |
+### Tables
 
-### Costs Table
-| Column | Description |
-|------|------------|
-| department_id | Department identifier |
-| cost_date | Cost transaction date |
-| cost_type | Category of cost (e.g. Salaries, Marketing) |
-| cost_amount | Cost incurred |
+- **departments** — department master data
+- **revenue** — monthly revenue by department
+- **costs** — monthly costs by department
 
-Granularity: **Department × Month**
+### Key Characteristics
 
----
+- 24 months of data (Jan 2023 – Dec 2024)
+- Revenue grows steadily across departments
+- Operations costs intentionally grow faster to simulate inefficiency
+- Clean relational schema suitable for SQL & BI tools
 
-## 🛠️ Tech Stack
-- **SQL** (CTEs, joins, aggregations)
-- **Python** (pandas, matplotlib)
-- **Matplotlib** (visualization)
+## 🛠️ Tools & Technologies
 
+- **SQL:** joins, aggregations, CTEs, window functions
+- **Python:** pandas, matplotlib
+- **Database:** SQLite / PostgreSQL (portable SQL)
+- **Visualization:** matplotlib (dashboard-ready logic)
 
----
+## 📊 Key Analyses Performed
 
-## 📊 Key Metrics Calculated
-- Total Revenue
-- Total Cost
-- Profit (Revenue − Cost)
-- Cost-to-Revenue Ratio
-- Department Efficiency (Profit Margin)
-- Month-on-Month Growth
+1. **Monthly Profit Trend**
+   - Calculated total revenue, costs, and profit over time
+   - Identified increasing profitability with noticeable volatility
+   - **Insight:** Profit increased from ~$62K to ~$83K over 24 months, but fluctuations indicate inconsistent cost control.
 
----
+2. **Profit by Department**
+   - Aggregated revenue and cost at department level
+   - **Insight:** Sales and Marketing generate all company profit, while Operations alone incurred a cumulative loss of ~$950K.
 
-## 📈 Key Insights
+3. **Department Efficiency**
+   - Efficiency Ratio = Revenue / Cost
 
-Operations costs increased significantly without corresponding revenue growth, indicating inefficiency.
+   | Department   | Efficiency |
+   |--------------|------------|
+   | Sales        | 1.67       |
+   | Marketing    | 1.43       |
+   | IT           | 0.93       |
+   | HR           | 0.88       |
+   | Operations   | 0.69       |
 
-Multiple departments experienced recurring monthly losses due to cost spikes rather than revenue decline.
+   - **Insight:** Operations is structurally inefficient, generating only $0.69 for every $1 spent.
 
-Marketing and discretionary spend showed weak correlation with revenue growth.
+4. **Month-on-Month Growth Analysis**
+   - Used SQL window functions to compare revenue vs cost growth.
+   - **Insight:** Costs frequently outpaced revenue growth, especially in early 2024 and Q4 2024, putting pressure on margins.
 
-Some departments maintained stable margins, suggesting best-practice cost management.
+5. **Cost Overrun Detection**
+   - Identified months where department costs increased more than 6% MoM.
+   - **Insight:** Operations experienced repeated 6–7% monthly cost spikes across multiple periods, indicating a systemic cost control issue rather than a one-time anomaly.
 
+## 📈 Visualizations
+
+Key visuals created using matplotlib:
+
+- Monthly profit trend
+- Revenue vs cost by department
+- Efficiency ratio by department
+- Operations revenue vs cost over time
+
+These visuals clearly highlight where money is being lost and why.
+
+## 💡 Final Business Insights
+
+- The company is growing and becoming more profitable overall
+- Profitability is unstable due to rising operational costs
+- Sales and Marketing are scalable profit drivers
+- Operations is the primary source of margin erosion
+- Improving cost controls would have a larger impact than increasing revenue
+
+## 🧠 Recommendations
+
+- Conduct operational cost audits
+- Set cost-growth thresholds tied to revenue performance
+- Reallocate investment toward high-efficiency departments
+- Monitor cost growth with automated alerts
