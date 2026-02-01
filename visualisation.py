@@ -1,4 +1,4 @@
-# Step 7: Python visualizations using matplotlib (retry)
+# Python visualizations using matplotlib 
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -64,3 +64,4 @@ plt.legend()
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
+
